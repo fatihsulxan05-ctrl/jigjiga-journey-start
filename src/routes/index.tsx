@@ -1536,7 +1536,7 @@ function Index() {
       </Dialog>
 
       <Dialog open={ayarlarAcik} onOpenChange={setAyarlarAcik}>
-        <DialogContent className="flex max-h-[85dvh] flex-col sm:max-w-sm">
+        <DialogContent className="flex h-dvh max-h-none w-full max-w-full flex-col gap-3 rounded-none border-0 p-4 sm:p-6">
           <DialogHeader className="shrink-0">
             <DialogTitle>{tr("ayarlar")}</DialogTitle>
             <DialogDescription>{tr("ayarlarAciklama")}</DialogDescription>
