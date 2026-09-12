@@ -1536,12 +1536,12 @@ function Index() {
       </Dialog>
 
       <Dialog open={ayarlarAcik} onOpenChange={setAyarlarAcik}>
-        <DialogContent className="sm:max-w-sm">
-          <DialogHeader>
+        <DialogContent className="flex max-h-[85dvh] flex-col sm:max-w-sm">
+          <DialogHeader className="shrink-0">
             <DialogTitle>{tr("ayarlar")}</DialogTitle>
             <DialogDescription>{tr("ayarlarAciklama")}</DialogDescription>
           </DialogHeader>
-          <div className="space-y-2">
+          <div className="-mx-1 min-h-0 flex-1 space-y-2 overflow-y-auto px-1 py-1">
             <button
               type="button"
               className="flex w-full items-center gap-3 rounded-md border border-border/60 px-3 py-2 text-left transition-colors hover:bg-accent"
