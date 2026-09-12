@@ -1724,7 +1724,7 @@ function Index() {
               </>
             )}
           </div>
-          <DialogFooter>
+          <DialogFooter className="shrink-0">
             <Button variant="ghost" onClick={() => setAyarlarAcik(false)}>
               {tr("kapat")}
             </Button>
