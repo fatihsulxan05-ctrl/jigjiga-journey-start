@@ -41,7 +41,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu } from "lucide-react";
+import { ArrowLeft, Menu } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -1536,12 +1536,12 @@ function Index() {
       </Dialog>
 
       <Dialog open={ayarlarAcik} onOpenChange={setAyarlarAcik}>
-        <DialogContent className="sm:max-w-sm">
-          <DialogHeader>
+        <DialogContent className="flex h-dvh max-h-none w-full max-w-full flex-col gap-3 rounded-none border-0 p-4 sm:p-6">
+          <DialogHeader className="shrink-0">
             <DialogTitle>{tr("ayarlar")}</DialogTitle>
             <DialogDescription>{tr("ayarlarAciklama")}</DialogDescription>
           </DialogHeader>
-          <div className="space-y-2">
+          <div className="-mx-1 min-h-0 flex-1 space-y-2 overflow-y-auto px-1 py-1">
             <button
               type="button"
               className="flex w-full items-center gap-3 rounded-md border border-border/60 px-3 py-2 text-left transition-colors hover:bg-accent"
@@ -1724,7 +1724,15 @@ function Index() {
               </>
             )}
           </div>
-          <DialogFooter>
+          <DialogFooter className="shrink-0 sm:justify-between">
+            <Button
+              variant="outline"
+              className="gap-2"
+              onClick={() => setAyarlarAcik(false)}
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Geri dön
+            </Button>
             <Button variant="ghost" onClick={() => setAyarlarAcik(false)}>
               {tr("kapat")}
             </Button>
