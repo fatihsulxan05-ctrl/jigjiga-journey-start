@@ -130,7 +130,7 @@ const SOZLUK = {
   tr: {
     baslik: "SİEC JİGJİGA KURSU",
     altBaslikHafizlik: "Hafızlık takip paneli",
-    altBaslikAidat: "Aidat takip paneli",
+    altBaslikAidat: "Aidat Listesi",
     girisYap: "Giriş Yap",
     girisYapKisa: "Giriş yap",
     hocaefendiGirisi: "Hocaefendi Girişi",
@@ -808,7 +808,7 @@ function Index() {
 
   const aidatListeSadeceIsimPdf = () => {
     listeYazdir({
-      altBaslik: "Talebe Listesi (Sadece İsimler)",
+      altBaslik: "Talebe İsim Listesi",
       bilgi: [`Toplam talebe: ${aidatTalebeler.length}`],
       sutunlar: [
         { baslik: "Sıra No", genislik: "15%", hiza: "center" },
@@ -822,7 +822,7 @@ function Index() {
   const aidatListeSadeceIsimExcel = () => {
     excelIndir(
       "aidat-talebe-listesi-sadece-isimler",
-      "Talebe Listesi",
+      "Talebe İsim Listesi",
       [
         { baslik: "Sıra No", genislik: 12 },
         { baslik: "Talebe İsmi", genislik: 40 },
@@ -975,7 +975,7 @@ function Index() {
                 <DropdownMenuSeparator />
                 {([
                   ["hafizlik", "Hafızlık takip paneli"],
-                  ["aidat", "Aidat takip paneli"],
+                  ["aidat", "Aidat Listesi"],
                 ] as const).map(([k, etiket]) => (
                   <DropdownMenuItem
                     key={k}
@@ -1653,7 +1653,7 @@ function Index() {
             >
               <FileDown className="h-4 w-4 text-muted-foreground" />
               <span className="text-sm font-medium">
-                Talebe Listesi (Sadece İsim) PDF İndir
+                Talebe İsim Listesi PDF İndir
               </span>
             </button>
             <button
@@ -1666,7 +1666,7 @@ function Index() {
             >
               <FileDown className="h-4 w-4 text-muted-foreground" />
               <span className="text-sm font-medium">
-                Talebe Listesi (Sadece İsim) Excel İndir
+                Talebe İsim Listesi Excel İndir
               </span>
             </button>
             {hocaModu && (
