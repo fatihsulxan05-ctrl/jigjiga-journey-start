@@ -1589,60 +1589,62 @@ function Index() {
                 </SelectContent>
               </Select>
             </div>
-            <button
-              type="button"
-              className="flex w-full items-center gap-3 rounded-md border border-border/60 px-3 py-2 text-left transition-colors hover:bg-accent"
-              onClick={() => {
-                const secim = aidatIndirAy;
-                setAyarlarAcik(false);
-                setTimeout(() => void aidatPdf(secim), 150);
-              }}
-            >
-              <FileDown className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium">
-                Aidat Listesini PDF İndir
-              </span>
-            </button>
-            <button
-              type="button"
-              className="flex w-full items-center gap-3 rounded-md border border-border/60 px-3 py-2 text-left transition-colors hover:bg-accent"
-              onClick={() => {
-                setAyarlarAcik(false);
-                setTimeout(() => aidatListePdf(), 150);
-              }}
-            >
-              <FileDown className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium">
-                Talebe Listesi PDF İndir
-              </span>
-            </button>
-            <button
-              type="button"
-              className="flex w-full items-center gap-3 rounded-md border border-border/60 px-3 py-2 text-left transition-colors hover:bg-accent"
-              onClick={() => {
-                setAyarlarAcik(false);
-                setTimeout(() => aidatListeExcel(), 150);
-              }}
-            >
-              <FileDown className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium">
-                Talebe Listesi Excel İndir
-              </span>
-            </button>
-            <button
-              type="button"
-              className="flex w-full items-center gap-3 rounded-md border border-border/60 px-3 py-2 text-left transition-colors hover:bg-accent"
-              onClick={() => {
-                const secim = aidatIndirAy;
-                setAyarlarAcik(false);
-                setTimeout(() => void aidatExcel(secim), 150);
-              }}
-            >
-              <FileDown className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium">
-                Aidat Listesini Excel İndir
-              </span>
-            </button>
+            <div className="grid grid-cols-4 gap-2">
+              <button
+                type="button"
+                className="flex h-full flex-col items-center justify-center gap-1 rounded-md border border-border/60 px-1 py-2 text-center transition-colors hover:bg-accent"
+                onClick={() => {
+                  const secim = aidatIndirAy;
+                  setAyarlarAcik(false);
+                  setTimeout(() => void aidatPdf(secim), 150);
+                }}
+              >
+                <FileDown className="h-4 w-4 shrink-0 text-muted-foreground" />
+                <span className="text-[10px] font-medium leading-tight">
+                  Aidat Listesi PDF
+                </span>
+              </button>
+              <button
+                type="button"
+                className="flex h-full flex-col items-center justify-center gap-1 rounded-md border border-border/60 px-1 py-2 text-center transition-colors hover:bg-accent"
+                onClick={() => {
+                  const secim = aidatIndirAy;
+                  setAyarlarAcik(false);
+                  setTimeout(() => void aidatExcel(secim), 150);
+                }}
+              >
+                <FileDown className="h-4 w-4 shrink-0 text-muted-foreground" />
+                <span className="text-[10px] font-medium leading-tight">
+                  Aidat Listesi Excel
+                </span>
+              </button>
+              <button
+                type="button"
+                className="flex h-full flex-col items-center justify-center gap-1 rounded-md border border-border/60 px-1 py-2 text-center transition-colors hover:bg-accent"
+                onClick={() => {
+                  setAyarlarAcik(false);
+                  setTimeout(() => aidatListePdf(), 150);
+                }}
+              >
+                <FileDown className="h-4 w-4 shrink-0 text-muted-foreground" />
+                <span className="text-[10px] font-medium leading-tight">
+                  Talebe Listesi PDF
+                </span>
+              </button>
+              <button
+                type="button"
+                className="flex h-full flex-col items-center justify-center gap-1 rounded-md border border-border/60 px-1 py-2 text-center transition-colors hover:bg-accent"
+                onClick={() => {
+                  setAyarlarAcik(false);
+                  setTimeout(() => aidatListeExcel(), 150);
+                }}
+              >
+                <FileDown className="h-4 w-4 shrink-0 text-muted-foreground" />
+                <span className="text-[10px] font-medium leading-tight">
+                  Talebe Listesi Excel
+                </span>
+              </button>
+            </div>
             <button
               type="button"
               className="flex w-full items-center gap-3 rounded-md border border-border/60 px-3 py-2 text-left transition-colors hover:bg-accent"
