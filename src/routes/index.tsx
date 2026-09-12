@@ -41,7 +41,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu } from "lucide-react";
+import { ArrowLeft, Menu } from "lucide-react";
 import {
   Select,
   SelectContent,
