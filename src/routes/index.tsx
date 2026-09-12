@@ -1724,7 +1724,15 @@ function Index() {
               </>
             )}
           </div>
-          <DialogFooter className="shrink-0">
+          <DialogFooter className="shrink-0 sm:justify-between">
+            <Button
+              variant="outline"
+              className="gap-2"
+              onClick={() => setAyarlarAcik(false)}
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Geri dön
+            </Button>
             <Button variant="ghost" onClick={() => setAyarlarAcik(false)}>
               {tr("kapat")}
             </Button>
