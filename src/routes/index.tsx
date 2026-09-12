@@ -762,7 +762,7 @@ function Index() {
 
   const aidatListePdf = () => {
     listeYazdir({
-      altBaslik: "Aidat Talebe Listesi",
+      altBaslik: "Talebe Listesi",
       bilgi: [`Toplam talebe: ${aidatTalebeler.length}`],
       sutunlar: [
         { baslik: "Sıra No", genislik: "10%", hiza: "center" },
@@ -786,7 +786,7 @@ function Index() {
   const aidatListeExcel = () => {
     excelIndir(
       "aidat-talebe-listesi",
-      "Aidat Talebe Listesi",
+      "Talebe Listesi",
       [
         { baslik: "Sıra No", genislik: 8 },
         { baslik: "Talebe İsmi", genislik: 28 },
@@ -808,7 +808,7 @@ function Index() {
 
   const aidatListeSadeceIsimPdf = () => {
     listeYazdir({
-      altBaslik: "Aidat Talebe Listesi (Sadece İsimler)",
+      altBaslik: "Talebe Listesi (Sadece İsimler)",
       bilgi: [`Toplam talebe: ${aidatTalebeler.length}`],
       sutunlar: [
         { baslik: "Sıra No", genislik: "15%", hiza: "center" },
@@ -822,7 +822,7 @@ function Index() {
   const aidatListeSadeceIsimExcel = () => {
     excelIndir(
       "aidat-talebe-listesi-sadece-isimler",
-      "Aidat Talebe Listesi",
+      "Talebe Listesi",
       [
         { baslik: "Sıra No", genislik: 12 },
         { baslik: "Talebe İsmi", genislik: 40 },
@@ -996,7 +996,7 @@ function Index() {
                   }}
                   className={aidatListeAcik ? "font-semibold text-primary" : ""}
                 >
-                  Aidat Talebe Listesi
+                  Talebe Listesi
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuLabel>Gruplar</DropdownMenuLabel>
@@ -1036,7 +1036,7 @@ function Index() {
             </DropdownMenu>
             <span className="hidden text-sm font-medium text-muted-foreground sm:inline">
               {aidatListeAcik
-                ? "Aidat Talebe Listesi"
+                ? "Talebe Listesi"
                 : sekme === "aidat"
                   ? tr("altBaslikAidat")
                   : tr("altBaslikHafizlik")}
@@ -1051,7 +1051,7 @@ function Index() {
             </h1>
             <p className="mt-2 text-base text-muted-foreground sm:text-xl">
               {aidatListeAcik
-                ? "Aidat Talebe Listesi"
+                ? "Talebe Listesi"
                 : sekme === "aidat"
                   ? tr("altBaslikAidat")
                   : tr("altBaslikHafizlik")}
@@ -1141,7 +1141,7 @@ function Index() {
             <>
             <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <h2 className="text-base font-semibold text-foreground sm:text-lg">
-                Aidat Talebe Listesi
+                Talebe Listesi
               </h2>
             </div>
             <Card className="overflow-hidden">
@@ -1613,7 +1613,7 @@ function Index() {
             >
               <FileDown className="h-4 w-4 text-muted-foreground" />
               <span className="text-sm font-medium">
-                Aidat Talebe Listesi PDF İndir
+                Talebe Listesi PDF İndir
               </span>
             </button>
             <button
@@ -1626,7 +1626,7 @@ function Index() {
             >
               <FileDown className="h-4 w-4 text-muted-foreground" />
               <span className="text-sm font-medium">
-                Aidat Talebe Listesi Excel İndir
+                Talebe Listesi Excel İndir
               </span>
             </button>
             <button
@@ -1653,7 +1653,7 @@ function Index() {
             >
               <FileDown className="h-4 w-4 text-muted-foreground" />
               <span className="text-sm font-medium">
-                Aidat Talebe Listesi (Sadece İsim) PDF İndir
+                Talebe Listesi (Sadece İsim) PDF İndir
               </span>
             </button>
             <button
@@ -1666,14 +1666,14 @@ function Index() {
             >
               <FileDown className="h-4 w-4 text-muted-foreground" />
               <span className="text-sm font-medium">
-                Aidat Talebe Listesi (Sadece İsim) Excel İndir
+                Talebe Listesi (Sadece İsim) Excel İndir
               </span>
             </button>
             {hocaModu && (
               <>
                 <label className="flex w-full cursor-pointer items-center gap-3 rounded-md border border-border/60 px-3 py-2 text-left transition-colors hover:bg-accent">
                   <FileDown className="h-4 w-4 rotate-180 text-muted-foreground" />
-                  <span className="text-sm font-medium">Aidat Talebe Listesi Excel Yükle</span>
+                  <span className="text-sm font-medium">Talebe Listesi Excel Yükle</span>
                   <input
                     type="file"
                     accept=".xlsx,.xls"
